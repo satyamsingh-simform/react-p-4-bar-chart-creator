@@ -10,7 +10,7 @@ export const DisplayGraph = ({ graphData }: DisplayGraphProps) => {
     console.log(maxVal);
 
     const gap = Math.ceil(maxVal/10)
-    const intervals = Array.from({length:11},(_,index)=> index === 10 ? maxVal   :  gap * index).reverse()
+    const intervals = Array.from({length:11},(_,index)=> index === 10 ? maxVal:gap * index).reverse()
     
   return (
     <div className="left-right flex gap-10 flex-80 p-5 pb-1 border-l-2 border-b-2 relative">
