@@ -8,4 +8,7 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+.left-right{
+  margin: 20px;
+  margin-bottom: 100px;
+}
