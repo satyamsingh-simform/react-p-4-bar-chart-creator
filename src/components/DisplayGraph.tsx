@@ -9,15 +9,18 @@ export const DisplayGraph = ({ graphData }: DisplayGraphProps) => {
     const maxVal=Math.max(...graphData.map((obj)=>obj.value))
     console.log(maxVal);
 
-    const gap = Math.ceil(maxVal/10)
-    const intervals = Array.from({length:11},(_,index)=> index === 10 ? maxVal:gap * index).reverse()
+    const gap = Number((maxVal/10).toFixed(2));
+    console.log('gap',gap);
+    
+    const intervals = Array.from({length:11},(_,index)=> index === 10 ? maxVal:(gap * index).toFixed(2)).reverse()
+    console.log('int:',intervals);
     
   return (
     <div className="left-right flex gap-10 flex-80 p-5 pb-1 border-l-2 border-b-2 relative">
       <div  className="flex flex-col justify-between"
       >
         { maxVal === Number.NEGATIVE_INFINITY ? null : intervals.map((interval)=>{
-        return <span>{interval}</span>
+        return <span key={interval}>{interval}</span>
       })}
       </div>
       {graphData.map((data) => (
