@@ -29,6 +29,7 @@ export const DisplayGraph = ({ graphData }: DisplayGraphProps) => {
           className=" flex flex-col justify-end items-center p-3 pb-0"
         >
           <span
+            title={`${data.value}`}
             style={{ height: `${data.value/maxVal * 100}%` }}
             className="p-3 bg-amber-200 w-full min-w-15 flex justify-center relative hover:bg-pink-300 hover:cursor-pointer"
           >
