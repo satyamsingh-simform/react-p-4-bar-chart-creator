@@ -47,7 +47,7 @@ export const DisplayData = ({ graphData, setGraphData }: DisplayDataProps) => {
   }
 
   return (
-    <div className="flex flex-col gap-5 shadow-md inset-shadow-2xs p-5 h-100 overflow-y-auto">
+    <div className="flex flex-col gap-5 shadow-md inset-shadow-2xs p-5 h-90 overflow-y-auto">
       <div className="flex justify-between border-b border-gray-300">
         <span>LABEL</span>
         <span>VALUE</span>
