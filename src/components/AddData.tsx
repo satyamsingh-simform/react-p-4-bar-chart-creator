@@ -11,9 +11,6 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
   const [label, setLabel] = useState("");
   const [value, setValue] = useState(0);
 
-  // console.log(label,value);
-  console.log(graphData);
-
   function handleAddData() {
     if(!label){
       alert('empty label not allowed')
@@ -28,7 +25,6 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
       label: label,
       value: value,
     };
-    console.log(data);
     setGraphData([...graphData ,data]);
 
     setLabel("");
