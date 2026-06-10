@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { GraphData } from "../utils/type";
+import { DisplayData } from "./DisplayData";
 
 type AddDataProps = {
   graphData: GraphData[];
@@ -10,16 +11,20 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
   const [label, setLabel] = useState("");
   const [value, setValue] = useState(0);
 
-  // console.log(label,value);
-  console.log(graphData);
-
   function handleAddData() {
+    if(!label){
+      alert('empty label not allowed')
+      return
+    }
+    if(!value){
+      alert('empty value not allowed')
+      return
+    }
     const data = {
       id: crypto.randomUUID(),
       label: label,
       value: value,
     };
-    console.log(data);
     setGraphData([...graphData ,data]);
 
     setLabel("");
@@ -27,7 +32,7 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
   }
 
   return (
-    <section className="h-full flex-20 border-r-2 border-gray-300 p-3 ">
+    <section className="h-full flex flex-col gap-10 flex-20 border-r-2 border-gray-300 p-3 ">
       <div className="shadow-md flex flex-col gap-5 p-5">
         <div>
           <label htmlFor="label" className="text-gray-700">
@@ -63,6 +68,7 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
           submit
         </button>
       </div>
+      <DisplayData graphData={graphData} setGraphData={setGraphData}/>
     </section>
   );
 };
