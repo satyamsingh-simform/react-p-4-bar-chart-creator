@@ -11,7 +11,7 @@ export default function App() {
     return (
         <div className="h-screen flex flex-col">
             <Header/>
-            <main className="flex flex-97 h-full gap-3">
+            <main className="flex flex-97 h-full gap-3 mb-4">
                 <AddData graphData={graphData} setGraphData={setGraphData}/>
                 <DisplayGraph graphData={graphData}/>
             </main>

@@ -20,7 +20,7 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
       value: value,
     };
     console.log(data);
-    setGraphData([data, ...graphData]);
+    setGraphData([...graphData ,data]);
 
     setLabel("");
     setValue(0);
