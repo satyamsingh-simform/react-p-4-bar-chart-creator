@@ -10,5 +10,10 @@ body{
 
 .left-right{
   margin: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  margin-left: 50px;
+}
+
+.axis-label{
+  margin-top: 30px;
 }
