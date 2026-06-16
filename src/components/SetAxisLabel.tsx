@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { axisLabelContext } from "../App";
+import { useAxislabelContext } from "../customhook/useAxislabelContext";
 
 export const SetAxisLabel = () => {
 
-    const {xAxisLabel,yAxisLabel,setX,setY}=useContext(axisLabelContext)
-
+    // const {xAxisLabel,yAxisLabel,setX,setY}=useContext(axisLabelContext)
+  const {xAxisLabel,yAxisLabel,setX,setY}=useAxislabelContext()
   return(
     <div className="axis-label shadow-md flex gap-5 p-5 inset-shadow-2xs">
         <div>

@@ -17,10 +17,6 @@ export const AddData = ({ graphData, setGraphData }: AddDataProps) => {
       alert('empty label not allowed')
       return
     }
-    if(!value){
-      alert('empty value not allowed')
-      return
-    }
     const data = {
       id: crypto.randomUUID(),
       label: label,
